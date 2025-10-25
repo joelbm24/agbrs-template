@@ -1,0 +1,9 @@
+[template]
+cargo_generate_version = ">=0.9.0"
+
+[placeholders]
+description = { type = "string", prompt = "Description for the crate?", default = "A GBA game written in Rust." }
+emulator_command = { type = "string", prompt = "Which emulator?", choices = [
+  "mgba",
+  "mgba-qt",
+], default = "mgba" }

@@ -20,6 +20,20 @@ You will also want to install an emulator. The best support in agb is with [mgba
 If you want to run your game on real hardware, you will also need to install `agb-gbafix` which you can do after installing
 rust with the following: `cargo install agb-gbafix`. This is not required if you are only running your game in an emulator.
 
+### Using the template
+
+You'll first need to install cargo-generate
+
+```sh
+cargo install cargo-generate
+```
+
+Then it's just as simple as running this command to get started.
+
+```sh
+cargo generate joelbm24/agbrs-template --name <name of your project>
+```
+
 ### Running in an emulator
 
 Once you have the prerequisites installed, you should be able to build using

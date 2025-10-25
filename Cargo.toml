@@ -1,10 +1,9 @@
 [package]
-name = "agb_template"
+name = "{{project-name}}"
 version = "0.1.0"
-authors = [""]
 edition = "2024"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "{{description}}"
+authors = ["{{authors}}"]
 
 [dependencies]
 agb = "0.22.5"

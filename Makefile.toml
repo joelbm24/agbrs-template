@@ -1,0 +1,33 @@
+[tasks.build]
+command = "cargo"
+args = ["build", "--release"]
+
+[tasks.build-debug]
+command = "cargo"
+args = ["build"]
+
+[tasks.remove-gba]
+command = "rm"
+args = ["{{project-name}}.*"]
+
+[tasks.clean]
+command = "cargo"
+args = ["clean"]
+
+[tasks.fix]
+command = "agb-gbafix"
+args = [
+  "-o",
+  "{{project-name}}.gba",
+  "target/thumbv4t-none-eabi/release/{{project-name}}",
+]
+dependencies = ["build"]
+
+[tasks.fix-debug]
+command = "agb-gbafix"
+args = [
+  "-o",
+  "hello_gba.gba",
+  "target/thumbv4t-none-eabi/debug/{{project-name}}",
+]
+dependencies = ["build-debug"]
